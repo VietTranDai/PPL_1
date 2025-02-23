@@ -1,0 +1,11 @@
+docker start funny_maxwell
+docker exec -it funny_maxwell /bin/bash
+ls
+cd /usr/src/PPL
+source myenv/bin/activate
+python3 run.py gen
+
+
+
+// test
+python3 run.py test ParserSuite test_001
