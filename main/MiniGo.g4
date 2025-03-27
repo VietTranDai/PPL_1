@@ -1,4 +1,5 @@
 //2213951
+// Author: SAMAO
 grammar MiniGo;
 
 @lexer::header {
@@ -147,7 +148,9 @@ forClauseComplex : FOR forClause_init forClause_cond forClause_update block ;
 forClause_init : vardecl | assignment SEMI_COLON | expr SEMI_COLON | SEMI_COLON ;
 forClause_cond : expr SEMI_COLON | SEMI_COLON ;
 forClause_update : assignment | expr ;
+
 forClauseSimple : FOR expr block ;
+
 forRangeStmt : FOR IDENTIFIER forRange_tail ASSIGN_COLON RANGE expr block ;
 forRange_tail : COMMA IDENTIFIER | /* empty */ ;
 
